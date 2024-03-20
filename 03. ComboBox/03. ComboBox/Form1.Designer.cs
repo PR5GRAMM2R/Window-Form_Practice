@@ -28,81 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdYear = new System.Windows.Forms.ComboBox();
+            this.cmbYear = new System.Windows.Forms.ComboBox();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
-            this.cmdDay = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cmbDay = new System.Windows.Forms.ComboBox();
+            this.lblBirthDay = new System.Windows.Forms.Label();
+            this.lblToggle = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cmdYear
+            // cmbYear
             // 
-            this.cmdYear.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmdYear.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmdYear.FormattingEnabled = true;
-            this.cmdYear.Location = new System.Drawing.Point(181, 38);
-            this.cmdYear.Name = "cmdYear";
-            this.cmdYear.Size = new System.Drawing.Size(121, 26);
-            this.cmdYear.TabIndex = 0;
-            this.cmdYear.Text = "년 (4자)";
+            this.cmbYear.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbYear.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbYear.FormattingEnabled = true;
+            this.cmbYear.Location = new System.Drawing.Point(199, 44);
+            this.cmbYear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbYear.Name = "cmbYear";
+            this.cmbYear.Size = new System.Drawing.Size(133, 29);
+            this.cmbYear.TabIndex = 0;
+            this.cmbYear.Text = "년 (4자리)";
+            this.cmbYear.SelectedIndexChanged += new System.EventHandler(this.cmb_ItemOrTextChanged);
+            this.cmbYear.TextChanged += new System.EventHandler(this.cmb_ItemOrTextChanged);
             // 
             // cmbMonth
             // 
             this.cmbMonth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbMonth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbMonth.FormattingEnabled = true;
-            this.cmbMonth.Location = new System.Drawing.Point(328, 37);
+            this.cmbMonth.Location = new System.Drawing.Point(361, 43);
+            this.cmbMonth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbMonth.Name = "cmbMonth";
-            this.cmbMonth.Size = new System.Drawing.Size(121, 26);
+            this.cmbMonth.Size = new System.Drawing.Size(133, 29);
             this.cmbMonth.TabIndex = 1;
             this.cmbMonth.Text = "월";
+            this.cmbMonth.SelectedIndexChanged += new System.EventHandler(this.cmb_ItemOrTextChanged);
+            this.cmbMonth.TextChanged += new System.EventHandler(this.cmb_ItemOrTextChanged);
             // 
-            // cmdDay
+            // cmbDay
             // 
-            this.cmdDay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmdDay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmdDay.FormattingEnabled = true;
-            this.cmdDay.Location = new System.Drawing.Point(478, 37);
-            this.cmdDay.Name = "cmdDay";
-            this.cmdDay.Size = new System.Drawing.Size(121, 26);
-            this.cmdDay.TabIndex = 2;
-            this.cmdDay.Text = "일";
+            this.cmbDay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbDay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbDay.FormattingEnabled = true;
+            this.cmbDay.Location = new System.Drawing.Point(526, 44);
+            this.cmbDay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbDay.Name = "cmbDay";
+            this.cmbDay.Size = new System.Drawing.Size(133, 29);
+            this.cmbDay.TabIndex = 2;
+            this.cmbDay.Text = "일";
+            this.cmbDay.SelectedIndexChanged += new System.EventHandler(this.cmb_ItemOrTextChanged);
+            this.cmbDay.TextChanged += new System.EventHandler(this.cmb_ItemOrTextChanged);
             // 
-            // label1
+            // lblBirthDay
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "생일";
+            this.lblBirthDay.AutoSize = true;
+            this.lblBirthDay.Location = new System.Drawing.Point(32, 43);
+            this.lblBirthDay.Name = "lblBirthDay";
+            this.lblBirthDay.Size = new System.Drawing.Size(52, 21);
+            this.lblBirthDay.TabIndex = 3;
+            this.lblBirthDay.Text = "생일";
             // 
-            // label2
+            // lblToggle
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 18);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Label";
+            this.lblToggle.AutoSize = true;
+            this.lblToggle.Location = new System.Drawing.Point(35, 117);
+            this.lblToggle.Name = "lblToggle";
+            this.lblToggle.Size = new System.Drawing.Size(55, 21);
+            this.lblToggle.TabIndex = 4;
+            this.lblToggle.Text = "Label";
             // 
             // txtNote
             // 
-            this.txtNote.Location = new System.Drawing.Point(32, 146);
+            this.txtNote.Location = new System.Drawing.Point(39, 162);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtNote.Size = new System.Drawing.Size(601, 326);
+            this.txtNote.Size = new System.Drawing.Size(661, 380);
             this.txtNote.TabIndex = 5;
             this.txtNote.WordWrap = false;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(690, 446);
+            this.btnCalculate.Location = new System.Drawing.Point(759, 520);
+            this.btnCalculate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(139, 46);
+            this.btnCalculate.Size = new System.Drawing.Size(153, 54);
             this.btnCalculate.TabIndex = 6;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -110,18 +121,20 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 533);
+            this.ClientSize = new System.Drawing.Size(978, 622);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtNote);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmdDay);
+            this.Controls.Add(this.lblToggle);
+            this.Controls.Add(this.lblBirthDay);
+            this.Controls.Add(this.cmbDay);
             this.Controls.Add(this.cmbMonth);
-            this.Controls.Add(this.cmdYear);
+            this.Controls.Add(this.cmbYear);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,11 +142,11 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmdYear;
+        private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.ComboBox cmbMonth;
-        private System.Windows.Forms.ComboBox cmdDay;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbDay;
+        private System.Windows.Forms.Label lblBirthDay;
+        private System.Windows.Forms.Label lblToggle;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Button btnCalculate;
     }
