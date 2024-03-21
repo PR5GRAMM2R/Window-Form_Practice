@@ -111,5 +111,6 @@ namespace _04.ListView
             if (char.IsDigit(e.KeyChar) || e.KeyChar == Convert.ToChar(Keys.Back)) return;
             e.Handled = true;
         }
+
     }
 }

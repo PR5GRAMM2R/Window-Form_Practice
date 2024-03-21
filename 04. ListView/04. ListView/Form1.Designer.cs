@@ -48,6 +48,7 @@
             this.lvwPeopleInfo.Size = new System.Drawing.Size(1222, 430);
             this.lvwPeopleInfo.TabIndex = 0;
             this.lvwPeopleInfo.UseCompatibleStateImageBehavior = false;
+            this.lvwPeopleInfo.View = System.Windows.Forms.View.Details;
             // 
             // lblName
             // 
@@ -150,6 +151,7 @@
             this.Controls.Add(this.lvwPeopleInfo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
