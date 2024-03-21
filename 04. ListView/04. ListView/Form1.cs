@@ -37,7 +37,7 @@ namespace _04.ListView
             lvwPeopleInfo.Columns.RemoveByKey("last");
 
             lvwPeopleInfo.Columns[0].TextAlign = HorizontalAlignment.Left;
-            lvwPeopleInfo.Columns["Age"].TextAlign = HorizontalAlignment.Center;
+            lvwPeopleInfo.Columns[1].TextAlign = HorizontalAlignment.Center;
             lvwPeopleInfo.Columns[2].TextAlign = HorizontalAlignment.Right;
         }
 
@@ -51,7 +51,7 @@ namespace _04.ListView
         private ControlParseCase GetControlParseCase()
         {
             if (string.Equals(txtName.Text, string.Empty)) return ControlParseCase.Name;
-            else if (string.Equals(txtName.Text, string.Empty)) return ControlParseCase.Age;    ///////
+            else if (string.Equals(txtAge.Text, string.Empty)) return ControlParseCase.Age;    ///////
             else if (cmbGender.SelectedItem == null) return ControlParseCase.Gender;
 
             return ControlParseCase.None;
@@ -82,7 +82,7 @@ namespace _04.ListView
                 lvwItem.SubItems[item.Name].Text = controlParseDict[item.Name];*/
 
             foreach (string item in controlParseDict.Keys)
-                lvwItem.SubItems[item].Text = controlParseDict[item].ToString();   // 오류가 남
+                lvwItem.SubItems[item].Text = controlParseDict[item];   // 오류가 남
 
             lvwPeopleInfo.Items.Add(lvwItem);
         }
