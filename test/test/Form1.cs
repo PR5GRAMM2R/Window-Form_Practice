@@ -242,7 +242,7 @@ namespace test
         {
             if(originalBmp != null)
             {
-                e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
                 if(listRect.Count > 0 && drawBmp != null)
                 {
                     e.Graphics.DrawImage(drawBmp, imgRect);
